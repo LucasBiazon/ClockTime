@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-    <script src="/script.js" defer></script>
-    <meta name="keywords" content="relógio, clock, time, cronômetro, temporizador">
-    <title>ClockTime</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <button id="btClock">Relógio</button>
-            <button id="btTemporizador">Temporizador</button>
-            <button id="btCronometro">Cronômetro</button>
-        </nav>
-    </header>
-    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="keywords" content="
+            Relógios online, Online watches, Cronômetros digitais, Digital chronometers,
+            Temporizadores precisos, Accurate timers,
+            Relógios e cronômetros digitais, Digital watches and chronometers,
+            Ferramentas de tempo, Time tools,
+            Temporizadores online, Online timers,
+            Relógios esportivos, Sports watches,
+            Cronômetros para atividades físicas, Chronometers for physical activities,
+            Temporizadores de contagem regressiva, Countdown timers,
+            Relógios e cronômetros de alta qualidade, High-quality watches and chronometers
+        "/>
+        <meta type="author" content="Lucas Biazon Palma"/>
+        <meta name="description" content="
+        Explore nossa coleção de relógios, cronômetros e temporizadores digitais de última geração. Encontre ferramentas de tempo precisas e confiáveis para suas necessidades - desde relógios esportivos até cronômetros para suas atividades físicas. Navegue por nossa seleção para encontrar o equilíbrio perfeito entre estilo, funcionalidade e precisão."
+        />
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">     
+        <script src="/script.js" defer></script>
+        <title>ClockTime</title>    
+    </head>
+
+    <nav>
+        <button id="btClock" onclick="ClickBtClock()">Clock</button>
+        <button id="btTimer" onclick="ClickBtTimer()">Timer</button>
+        <button id="btStopwatch" onclick="ClickBtStopwatch()">Stopwatch</button>
+    </nav>
+
     <main>
+
         <div id="clock">
-            <div>
-                <span id="ClockHora">00</span>
-                <span id="ClockMin">00</span>
-                <span id="ClockSeg">00</span>
-             </div>
-            <p id="date"></p>
-        </div>
-
-        <div id="temporizador" class="disabled">
-            <div>
+            <div id="ClockTIme">
                 <span>00</span>
                 <span>00</span>
                 <span>00</span>
             </div>
-            <div>
-                <button>Start</button>
-                <button>Stop</button>
-                <button>Reset</button>
-            </div>
+            <p id="ClockDate"></p>
         </div>
 
-        <div id="cronometro" class="disabled"> 
-            g
+        <div id="timer" class="hidden">
+            timer
+        </div>
+
+        <div id="stopwatch" class="hidden">
+            Stopwatch
         </div>
     </main>
-</body>
 </html>
