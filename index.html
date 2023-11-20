@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <script src="/script.js" defer></script>
+    <meta name="keywords" content="relógio, clock, time, cronômetro, temporizador">
+    <title>ClockTime</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="btClock">Relógio</button>
+            <button id="btTemporizador">Temporizador</button>
+            <button id="btCronometro">Cronômetro</button>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="clock">
+            <div>
+                <span id="ClockHora">00</span>
+                <span id="ClockMin">00</span>
+                <span id="ClockSeg">00</span>
+             </div>
+            <p id="date"></p>
+        </div>
+
+        <div id="temporizador" class="disabled">
+            <div>
+                <span>00</span>
+                <span>00</span>
+                <span>00</span>
+            </div>
+            <div>
+                <button>Start</button>
+                <button>Stop</button>
+                <button>Reset</button>
+            </div>
+        </div>
+
+        <div id="cronometro" class="disabled"> 
+            g
+        </div>
+    </main>
+</body>
+</html>

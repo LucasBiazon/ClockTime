@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+:root{
+    --text-one: #252525 ;
+    --text-two: #f8f8f8;
+    --cor-principal: rgb(236, 209, 169);
+    --cor-secundaria: #77562a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(-250deg, var(--cor-principal), var(--cor-secundaria));
+}
+
+header, nav, main, #clock{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+header{
+    height: 60px;
+}
+nav{
+    gap:30px;
+}
+nav button{
+    color: var(--text-two);
+    font-size: 1.2rem;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+main{
+    height: calc(100% - 60px);
+  
+}
+
+#clock{
+    width: 100%;
+    gap: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#clock div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    gap: 10px;
+}
+
+#clock span{
+    height: 50%;
+    font-size: 10rem;
+    background-color: var(--cor-secundaria);
+    padding: 1%;
+    border: 2.5rem solid #ffffffa4;
+    color: var(--text-two);
+    border-radius: 30px;
+    
+}
+#temporizador{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.ativo{
+    opacity: 1;
+}
+
+.desativo{
+    opacity: 0.5;
+}
+
+.disabled{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    main, #clock{
+        background: linear-gradient(-250deg, var(--cor-principal), var(--cor-secundaria));
+
+        height: auto;
+    }
+}
