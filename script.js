@@ -130,5 +130,44 @@ function Reset(){
     inputHora.value = ""
     inputMin.value = ""
     inputSeg.value = ""
+}
+
+const minStop = document.querySelector("#horaStopwatchTime")
+const segStop = document.querySelector("#segStopwatchTime")
+const miliStop = document.querySelector("#miliStopwatchTime")
+function PlayStop(){
+    let min = 0
+    let seg  = 0 
+    let mili = 0
+    contador = setInterval(() =>{
+     mili++
+    if(mili >= 1000){
+        seg++
+        mili -= 1000
+    }
+    if(seg >= 60){
+        seg -= 60
+        min++
+    }
+    miliStop.innerHTML = mili
+    segStop.innerHTML = seg
+    minStop.innerHTML = min
+    
+    }, 1)
+   
+}
+
+
+ 
+
+
+function StopStop(){
+    clearInterval(contador)
+}
+function ResetStop(){
+    clearInterval(contador)
+    miliStop.innerHTML = '00'
+    segStop.innerHTML = '00'
+    minStop.innerHTML = '00'
     
 }

@@ -41,6 +41,7 @@ main{
     align-items: center;
     justify-content: center;
     height: calc(100% - 70px);
+    padding: 2%;
 }
 
 #DivClock{
@@ -68,6 +69,7 @@ main{
     color: #f7f7f7;
     background-color: #a37944;
     border: 3rem solid #f5d6a5c7;
+    font-weight: 700;
 }
 
 #clockDate{
@@ -98,6 +100,7 @@ main{
 }
 #inputsTimer input{
     font-size: 10rem;
+    font-weight: 700;
     width: 24.5%;
     text-align: center;
     height: 95%;
@@ -129,8 +132,51 @@ main{
     border: 0;
     font-size: 1.2rem;
     cursor: pointer;
+}
 
-    
+#stopwatch{
+    height: 100%;
+    width: 100%;
+}
+#DivStopwatch{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#stopwatchTime {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#stopwatchTime span{
+    font-size: 10rem;
+    padding: 2%;
+    color: #f7f7f7;
+    background-color: #a37944;
+    border: 3rem solid #f5d6a5c7;
+    font-weight: 700;
+}
+
+.buttonStopwatch{
+    display: flex;
+    gap: 30px;
+}
+.buttonStopwatch button{
+    height: 30px;
+    width: 200px;
+    color: #f3dbb5;
+    background-color: #a37944;
+    border: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 input[type=number]::-webkit-inner-spin-button { 
@@ -152,4 +198,37 @@ input[type=number] {
 
 .hidden{
     display: none;
+}
+
+
+@media screen and (max-width: 1040px){
+    html, body{
+        height: auto;
+    }
+    main{
+        height: auto;
+    }
+    #DivClock, #clockTime, #DivTimer,#inputsTimer, #DivStopwatch, #stopwatchTime  {
+        flex-wrap: wrap;
+        
+    }
+
+    #clockTime, #stopwatchTime, .buttonStopwatch{
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 1100px){
+   
+    #inputsTimer, .buttonTimer{
+        flex-direction: column;
+    }
+    #inputsTimer input{
+        width: 90%;
+    }
+    #DivTimer,#inputsTimer,.buttonTimer {
+        flex-wrap: wrap;
+        
+    }
 }
