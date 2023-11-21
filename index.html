@@ -25,20 +25,27 @@
     </head>
 
     <nav>
-        <button id="btClock" onclick="ClickBtClock()">Clock</button>
-        <button id="btTimer" onclick="ClickBtTimer()">Timer</button>
-        <button id="btStopwatch" onclick="ClickBtStopwatch()">Stopwatch</button>
+        <button id="btClock" onclick="ClickBtClock()">
+            Clock
+        </button>
+        <button id="btTimer" onclick="ClickBtTimer()">
+            Timer
+        </button>
+        <button id="btStopwatch" onclick="ClickBtStopwatch()">
+            Stopwatch
+        </button>
     </nav>
 
     <main>
-
         <div id="clock">
-            <div id="ClockTIme">
-                <span>00</span>
-                <span>00</span>
-                <span>00</span>
+            <div id="DivClock">
+                <div id="clockTime">
+                    <span id="horaClockTime">00</span>
+                    <span id="minClockTime">00</span>
+                    <span id="segClockTime">00</span>
+                </div>
+                <p id="clockDate">00/00/00</p>
             </div>
-            <p id="ClockDate"></p>
         </div>
 
         <div id="timer" class="hidden">

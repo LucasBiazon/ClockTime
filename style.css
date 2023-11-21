@@ -1,3 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root{
+    --corPrincipal : #f3dbb5;
+    --corSecundaria: #a37944;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient( 140deg, var(--corPrincipal), var(--corSecundaria)); 
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 70px;
+}
+
+nav button{
+    font-size: 1.4rem;
+    color: #f7f7f7;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 70px);
+}
+
+#DivClock{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+#clockTime{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 30px;
+}
+
+#clockTime span{
+    font-size: 10rem;
+    padding: 2%;
+    color: #f7f7f7;
+    background-color: #a37944;
+    border: 3rem solid #f5d6a5c7;
+}
+
+#clockDate{
+    color: rgb(66, 45, 18);
+    font-size: 1.2rem;
+}
 .ativado{
     opacity: 1;
 }

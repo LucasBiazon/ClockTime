@@ -6,6 +6,11 @@ const clock = document.querySelector("#clock")
 const timer = document.querySelector("#timer")
 const stopwatch = document.querySelector("#stopwatch")
 
+const horaClockTime = document.querySelector("#horaClockTime")
+const minClockTime = document.querySelector("#minClockTime")
+const segClockTime = document.querySelector("#segClockTime")
+const clockDate = document.querySelector("#clockDate")
+
 let mainAtual = clock
 function ClickBtClock(){
     btClock.classList.remove("desativado")
@@ -40,3 +45,10 @@ function ClickBtStopwatch(){
     mainAtual = stopwatch
 }
 
+function ClockTime(){
+    const now = new Date()
+    horaClockTime.innerHTML = now.getHours().toString().padStart(2, '0')
+    minClockTime.innerHTML = now.getMinutes().toString().padStart(2, '0')
+    segClockTime.innerHTML = now.getSeconds().toString().padStart(2, '0')
+    clockDate.innerHTML = `${now.getDate().toString().padStart(2, "0")}/${(now.getMonth() + 1).toString().padStart(2, "0")}/${now.getFullYear().toString().padStart(2, "0")}`
+}const clockInteval = setInterval(ClockTime, 1000)
