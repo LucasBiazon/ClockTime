@@ -59,7 +59,6 @@ main{
     height: auto;
     justify-content: center;
     align-items: center;
-    
     gap: 30px;
 }
 
@@ -74,6 +73,74 @@ main{
 #clockDate{
     color: rgb(66, 45, 18);
     font-size: 1.2rem;
+}
+
+#timer{
+    height: 100%;
+    width: 100%;
+}
+
+#DivTimer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#inputsTimer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#inputsTimer input{
+    font-size: 10rem;
+    width: 24.5%;
+    text-align: center;
+    height: 95%;
+    padding: 2%;
+    color: #f7f7f7;
+    background-color: #a37944;
+    border: 3rem solid #f5d6a5c7;
+    outline: 0;
+}::placeholder{
+    color: #f7f7f7b6;
+}
+
+#clockDate{
+    background-color: #a37944;
+    padding: 1%;
+    color: #f3dbb5;
+    font-weight: 600;
+}
+
+.buttonTimer{
+    display: flex;
+    gap: 20px;
+}
+.buttonTimer button{
+    height: 30px;
+    width: 200px;
+    color: #f3dbb5;
+    background-color: #a37944;
+    border: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
 }
 .ativado{
     opacity: 1;
