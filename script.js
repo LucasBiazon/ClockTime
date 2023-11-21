@@ -11,6 +11,14 @@ const minClockTime = document.querySelector("#minClockTime")
 const segClockTime = document.querySelector("#segClockTime")
 const clockDate = document.querySelector("#clockDate")
 
+const inputHora = document.querySelector("#inputHora")
+const inputMin = document.querySelector("#inputMin")
+const inputSeg = document.querySelector("#inputSeg")
+
+const minStop = document.querySelector("#horaStopwatchTime")
+const segStop = document.querySelector("#segStopwatchTime")
+const miliStop = document.querySelector("#miliStopwatchTime")
+
 let mainAtual = clock
 function ClickBtClock(){
     btClock.classList.remove("desativado")
@@ -53,16 +61,8 @@ function ClockTime(){
     clockDate.innerHTML = `${now.getDate().toString().padStart(2, "0")}/${(now.getMonth() + 1).toString().padStart(2, "0")}/${now.getFullYear().toString().padStart(2, "0")}`
 }const clockInteval = setInterval(ClockTime, 1000)
 
-const btPlay = document.querySelector("#btPlay")
-const btStop = document.querySelector("#btStop")
-const btReset = document.querySelector("#btReset")
 
-const inputHora = document.querySelector("#inputHora")
-const inputMin = document.querySelector("#inputMin")
-const inputSeg = document.querySelector("#inputSeg")
-
-
-function Play(){
+function PlayTimer(){
    let hora  = parseInt(inputHora.value)
    let min = parseInt(inputMin.value)
    let seg = parseInt(inputSeg.value)
@@ -94,11 +94,9 @@ function Play(){
     inputMin.value = min
     inputSeg.value = seg
 
-  
-        reduzir = setInterval(Reduce, 1000)
+    reduzir = setInterval(Reduce, 1000)
     
 }   
-
 
 function Reduce() {
     if(inputSeg.value != 0 || inputMin.value != 0 || inputHora.value != 0 ) {
@@ -116,25 +114,13 @@ function Reduce() {
   
 
     if(inputSeg.value == 0  && inputMin.value == 0 && inputHora.value == 0 ){
-        Stop()
+        Stop(1)
         const audio = new Audio('/assets/dingdong.mp3')
         audio.play()
     }
 
 }
 
-
-function Stop(){ clearInterval(reduzir) }
-function Reset(){
-    Stop()
-    inputHora.value = ""
-    inputMin.value = ""
-    inputSeg.value = ""
-}
-
-const minStop = document.querySelector("#horaStopwatchTime")
-const segStop = document.querySelector("#segStopwatchTime")
-const miliStop = document.querySelector("#miliStopwatchTime")
 function PlayStop(){
     let min = 0
     let seg  = 0 
@@ -157,17 +143,24 @@ function PlayStop(){
    
 }
 
-
- 
-
-
-function StopStop(){
-    clearInterval(contador)
+function Reset(type){
+    if(type == 1){
+        Stop(1)
+        inputHora.value = ""
+        inputMin.value = ""
+        inputSeg.value = ""
+    }else{
+        Stop(2)
+        miliStop.innerHTML = '00'
+        segStop.innerHTML = '00'
+        minStop.innerHTML = '00'
+    }
 }
-function ResetStop(){
-    clearInterval(contador)
-    miliStop.innerHTML = '00'
-    segStop.innerHTML = '00'
-    minStop.innerHTML = '00'
-    
+
+function Stop(type){
+    if(type == 1){
+        clearInterval(reduzir)
+    }else{
+        clearInterval(contador)
+    }
 }

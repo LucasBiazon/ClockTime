@@ -1,9 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-:root{
-    --corPrincipal : #f3dbb5;
-    --corSecundaria: #a37944;
-}
 
 *{
     margin: 0;
@@ -17,166 +13,94 @@ html, body{
 }
 
 body{
-    background: linear-gradient( 140deg, var(--corPrincipal), var(--corSecundaria)); 
+    background: linear-gradient( 140deg, #f3dbb5, #a37944); 
+}
+
+nav, main, .container, .containerDiv, .DivButton{
+    display: flex;
+}
+
+nav, main, .container, .containerDiv{
+    align-items: center;
+}
+
+nav, main, .container, .containerDiv{
+    justify-content: center;
+}
+
+nav, main, .container, .containerDiv, .DivButton{
+    gap: 30px;
+}
+
+.bloco, .container{
+    width: 100%;
+    height: 100%;
+}
+
+.Span, .Button, .containerDiv input, #clockDate{
+    background-color: #a37944;
+}
+
+.Span, .containerDiv input {
+    font-size: 10rem;
+    font-weight: 700;
+}
+
+nav button, .container, .containerDiv input{
+    color: #f7f7f7;
+}
+
+main, .Span, .containerDiv input, #clockDate{
+    padding: 2%;
+}
+
+button{
+    cursor: pointer;
+    font-size: 1.4rem;
+    border: 0;
 }
 
 nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
     height: 70px;
 }
 
 nav button{
-    font-size: 1.4rem;
-    color: #f7f7f7;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
+    background-color: transparent; 
 }
 
 main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: calc(100% - 70px);
-    padding: 2%;
 }
 
-#DivClock{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container{
     flex-direction: column;
-    gap: 30px;
 }
 
-
-#clockTime{
-    display: flex;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-#clockTime span{
-    font-size: 10rem;
-    padding: 2%;
-    color: #f7f7f7;
-    background-color: #a37944;
+.Span{
     border: 3rem solid #f5d6a5c7;
-    font-weight: 700;
+}
+
+.Button{
+    height: 30px;
+    width: 200px;
+    color: #f3dbb5;
 }
 
 #clockDate{
-    color: rgb(66, 45, 18);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: #f3dbb5;
+    font-weight: 600;
+    padding: 1%;
 }
 
-#timer{
-    height: 100%;
-    width: 100%;
-}
-
-#DivTimer{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-}
-
-#inputsTimer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-#inputsTimer input{
-    font-size: 10rem;
-    font-weight: 700;
-    width: 24.5%;
+.containerDiv input{
+    width: 25%;
     text-align: center;
     height: 95%;
-    padding: 2%;
-    color: #f7f7f7;
-    background-color: #a37944;
     border: 3rem solid #f5d6a5c7;
     outline: 0;
 }::placeholder{
     color: #f7f7f7b6;
-}
-
-#clockDate{
-    background-color: #a37944;
-    padding: 1%;
-    color: #f3dbb5;
-    font-weight: 600;
-}
-
-.buttonTimer{
-    display: flex;
-    gap: 20px;
-}
-.buttonTimer button{
-    height: 30px;
-    width: 200px;
-    color: #f3dbb5;
-    background-color: #a37944;
-    border: 0;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-#stopwatch{
-    height: 100%;
-    width: 100%;
-}
-#DivStopwatch{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-}
-
-#stopwatchTime {
-    display: flex;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-#stopwatchTime span{
-    font-size: 10rem;
-    padding: 2%;
-    color: #f7f7f7;
-    background-color: #a37944;
-    border: 3rem solid #f5d6a5c7;
-    font-weight: 700;
-}
-
-.buttonStopwatch{
-    display: flex;
-    gap: 30px;
-}
-.buttonStopwatch button{
-    height: 30px;
-    width: 200px;
-    color: #f3dbb5;
-    background-color: #a37944;
-    border: 0;
-    font-size: 1.2rem;
-    cursor: pointer;
 }
 
 input[type=number]::-webkit-inner-spin-button { 
@@ -188,6 +112,7 @@ input[type=number] {
    appearance: textfield;
 
 }
+
 .ativado{
     opacity: 1;
 }
@@ -200,35 +125,17 @@ input[type=number] {
     display: none;
 }
 
-
-@media screen and (max-width: 1040px){
-    html, body{
-        height: auto;
-    }
-    main{
-        height: auto;
-    }
-    #DivClock, #clockTime, #DivTimer,#inputsTimer, #DivStopwatch, #stopwatchTime  {
-        flex-wrap: wrap;
-        
-    }
-
-    #clockTime, #stopwatchTime, .buttonStopwatch{
-        flex-direction: column;
-    }
-}
-
+nav button:hover{opacity: 1;}
 
 @media screen and (max-width: 1100px){
-   
-    #inputsTimer, .buttonTimer{
+   html, body,  main{
+        height: auto;
+   }
+    .container, .containerDiv, .DivButton{
         flex-direction: column;
     }
-    #inputsTimer input{
+    .containerDiv input{
         width: 90%;
     }
-    #DivTimer,#inputsTimer,.buttonTimer {
-        flex-wrap: wrap;
-        
-    }
+   
 }

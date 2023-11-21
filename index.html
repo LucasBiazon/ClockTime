@@ -37,43 +37,43 @@
     </nav>
 
     <main>
-        <div id="clock">
-            <div id="DivClock">
-                <div id="clockTime">
-                    <span id="horaClockTime">00</span>
-                    <span id="minClockTime">00</span>
-                    <span id="segClockTime">00</span>
+        <div id="clock" class="bloco">
+            <div class="container">
+                <div class="containerDiv">
+                    <span id="horaClockTime" class="Span">00</span>
+                    <span id="minClockTime" class="Span">00</span>
+                    <span id="segClockTime" class="Span">00</span>
                 </div>
                 <p id="clockDate">00/00/00</p>
             </div>
         </div>
 
-        <div id="timer" class="hidden">
-            <div id="DivTimer" >
-                <div id="inputsTimer">
+        <div id="timer" class="hidden bloco">
+            <div class="container" >
+                <div class="containerDiv">
                     <input type="number"  id="inputHora"  placeholder="00" >
                     <input type="number"  id="inputMin"   placeholder="00">
                     <input type="number"  id="inputSeg"  placeholder="00">
                 </div>
-                <div class="buttonTimer">
-                    <button id="btPlay" onclick="Play()">Play</button>
-                    <button id="btStop" onclick="Stop()">Stop</button>
-                    <button id="btReset" onclick="Reset()">Reset</button>
+                <div class="DivButton">
+                    <button onclick="PlayTimer()" class="Button">Play</button>
+                    <button onclick="Stop(1)" class="Button">Stop</button>
+                    <button onclick="Reset(1)" class="Button">Reset</button>
                 </div>
             </div>
         </div>
 
-        <div id="stopwatch" class="hidden">
-            <div id="DivStopwatch">
-                <div id="stopwatchTime">
-                    <span id="minStopwatchTime">00</span>
-                    <span id="segStopwatchTime">00</span>
-                    <span id="miliStopwatchTime">00</span>
+        <div id="stopwatch" class="hidden bloco">
+            <div class="container">
+                <div class="containerDiv">
+                    <span id="minStopwatchTime"  class="Span">00</span>
+                    <span id="segStopwatchTime"  class="Span">00</span>
+                    <span id="miliStopwatchTime" class="Span">00</span>
                 </div>
-                <div class="buttonStopwatch">
-                    <button  onclick="PlayStop()">Play</button>
-                    <button  onclick="StopStop()">Stop</button>
-                    <button  onclick="ResetStop()">Reset</button>
+                <div class="DivButton">
+                    <button  onclick="PlayStop()" class="Button">Play</button>
+                    <button  onclick="Stop(2)" class="Button">Stop</button>
+                    <button  onclick="Reset(2)" class="Button">Reset</button>
                 </div>
             </div>
         </div>
